@@ -319,7 +319,8 @@ export type ExcalidrawLinearElement = _ExcalidrawElementBase &
     endBinding: PointBinding | null;
     startArrowhead: Arrowhead | null;
     endArrowhead: Arrowhead | null;
-  }>;
+      strokeStyles?: ("solid" | "dashed" | "dotted")[];
+}>;
 
 export type FixedSegment = {
   start: LocalPoint;
@@ -366,7 +367,8 @@ export type ExcalidrawFreeDrawElement = _ExcalidrawElementBase &
     pressures: readonly number[];
     simulatePressure: boolean;
     lastCommittedPoint: LocalPoint | null;
-  }>;
+      strokeStyles?: ("solid" | "dashed" | "dotted")[];
+}>;
 
 export type FileId = string & { _brand: "FileId" };
 
